@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fastapi-postgis-docker"
+version = "0.1.0"
+description = ""
+authors = ["k-rea <kitahara@k-rea.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+fastapi = "^0.70.0"
+SQLAlchemy = "^1.4.26"
+GeoAlchemy2 = "^0.9.4"
+psycopg2-binary = "^2.9.1"
+pydantic = "^1.8.2"
+uvicorn = "^0.15.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+alembic = "^1.7.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
