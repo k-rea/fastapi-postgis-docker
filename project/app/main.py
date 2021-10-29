@@ -1,8 +1,14 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+from .api import ping
 
 
-@app.get('/')
-def index() -> dict:
-    return {"msg": "Hello world!"}
+def create_application() -> FastAPI:
+    application = FastAPI()
+
+    application.include_router(ping.router)
+
+    return application
+
+
+app = create_application()
